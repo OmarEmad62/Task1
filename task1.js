@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     prevButton.addEventListener('click', showPreviousItem);
     nextButton.addEventListener('click', showNextItem);
 
-    // Initialize the content on page load
+ 
     highlightItem(currentIndex);
     updateMainContent(currentIndex);
 });
