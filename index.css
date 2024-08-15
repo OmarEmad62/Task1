@@ -1,0 +1,173 @@
+:root {
+    --primary-bg-color: rgb(119, 11, 226, 0.67);
+    --primary-text-color: #fefefe;
+    --secondary-text-color: #ddd;
+    --highlight-color: rgba(123, 3, 242, 0.67);
+    --hover-color: rgba(81, 6, 155, 0.736);
+    --shadow-color: rgba(119, 11, 226, 0.3);
+    --separator-color: #fefefe;
+}
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+    background: url('/assests/gradient-background-copy-space_1179130-416441-1920x1080.jpg') no-repeat center center/cover;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    height: 568px; 
+    position: relative;
+    justify-content: flex-start; 
+}
+
+content {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px; 
+    height: 268px;
+    text-align: left;
+    margin-left: 45px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+content h2 {
+    margin: 0 0 10px;
+    font-size: 28px;
+    font-weight: 600; 
+    color: var(--primary-text-color);
+}
+
+date {
+    margin: 0 0 10px;
+    color: var(--secondary-text-color);
+}
+
+content p {
+    margin: 0 0 20px;
+    font-size: 14px; 
+    color: var(--secondary-text-color);
+}
+
+.btn {
+    width: fit-content;
+    border: none;
+    color: black;
+}
+
+.btn:hover {
+    color: var(--hover-color); 
+    box-shadow: 0px 4px 15px var(--shadow-color); 
+    transform: scale(1.02); 
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-text-color);
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1.1), rgba(0, 0, 0, 0));
+}
+
+element {
+    flex: 1;
+    text-align: center;
+    padding: 0px 25px;
+    padding-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+    color: var(--secondary-text-color);
+}
+
+element:not(.last)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 40px;
+    transform: translateY(-50%);
+    height: 52%;
+    width: 1px;
+    background-color: var(--separator-color); 
+}
+
+.nav-button {
+    background: none;
+    border: 2px solid var(--primary-text-color);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-text-color);
+    cursor: pointer;
+    padding: 0;
+    margin: 0 10px;
+    position: relative;
+    top: -14px; 
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-button.prev::before {
+    content: "\01F860";
+}
+
+.nav-button.next::before {
+    content: "\01F862";
+}
+
+.highlight-item {
+    color: var(--primary-text-color);
+    position: relative;
+    font-weight: 600;
+    top: -5px;
+    overflow: hidden; 
+}
+
+.highlight-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 7px; 
+    width: 100%;
+    height: 7px;
+    background: var(--highlight-color);
+    opacity: 1; 
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
