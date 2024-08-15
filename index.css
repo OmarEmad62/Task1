@@ -12,12 +12,11 @@
     margin: 0;
     border: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+   font-family: Arial, sans-serif;
 }
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
